@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>{{ server.name }}</h4>
+        </div>
+        <div class="col">
+            <button 
+                class="btn btn-primary" 
+                (click)="onEdit()"
+                [disabled]="!allowEdit"
+            >Edit Server</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>Welcome to Server Manager 4.0</h4>
+            <p>Manage your servers and users</p>
+        </div>
+        <div class="col-md-5">
+            <button (click)="onLoadServer(1)" class="btn btn-primary">Load servers</button>
+            <button class="btn btn-default" (click)="onLogin()">Login</button>
+            <button class="btn btn-default" (click)="onLogout()">Logout</button>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <p class="col alert alert-success" *ngIf="isLogged">
+            You are Logged in, now you can operate
+        </p>
+        <p class="col alert alert-danger" *ngIf="!isLogged">
+            You need to log in to operate
+        </p>
+    </div>
+</div>

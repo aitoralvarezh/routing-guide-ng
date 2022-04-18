@@ -1,0 +1,22 @@
+<div class="row ">
+    <div class="col-xs-12">
+        <div class="d-flex">
+            <h5 class="col-sm-3">server Name: </h5>
+            <span class="col-sm-4 rounded text-primary border text-center border-primary p-1">{{ activeServer.name }}</span>
+        </div>
+        <form class="form-group p-2">
+            <div class="d-flex flex-column">
+                <label for="serverName">New server name</label>
+                <input type="text" class="" id="serverName" name="{{activeServer.name}}" [(ngModel)]="serverName" >
+            </div>
+            <div class="d-flex flex-column">
+                <label for="status">Server Status</label>
+                <select id="status" class="form-control" name="{{activeServer.status}}" [(ngModel)]="serverStatus" >
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+          </form>
+        <button class="btn btn-primary mt-2" (click)="onUpdateServer()">Update server</button>
+    </div>
+</div>
